@@ -1,0 +1,44 @@
+﻿body {
+}
+
+
+div {
+    background-color: blueviolet;
+    margin: 1px;
+    padding: 1px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+table.data tr {
+    border: 2px solid white;
+    margin: 1px;
+    padding: 1px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+table.data td {
+    border: 3px solid white;
+    margin: 1px;
+    padding: 1px;
+    background-color: green;
+    border-radius: 10px;
+}
+table.data th {
+    border: 1px solid white;
+    margin: 1px;
+    padding: 1px;
+    background-color: orange;
+}
+
+.waiting {
+    cursor: wait;
+}
+
+.imgloading{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}

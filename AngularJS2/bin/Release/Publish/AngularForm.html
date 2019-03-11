@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/products.css?v=1.1"/>
+    <script src="scripts/angular.js"></script>
+    <script src="app/newApp.js"></script>
+    <script src="controller/productController.js"></script>
+    <script src="controller/filmController.js"></script>
+    <script src="services/stateService.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="productController" ng-show="showDiv">
+
+        <div ng-include="'include/prodname.html'"></div>
+        <div ng-include="'include/proddetails.html'"></div>
+        <div ng-include="'include/prodmodel.html'"></div>
+    </div>
+    <div ng-controller="filmController" ng-show="showDiv">
+        
+        <table>
+            <tr>
+                <td><button ng-click="fetchFilms()"> Fetch Movies</button></td>
+                <td ng-show="loadComplete"><img class="imgloading" src="pics/waitingTo.gif" /></td>
+            </tr>
+            <tr ng-show="showFilter">
+                <td>Search Criteria (in title) :</td>
+                <td><input type="text" ng-model="searchTitle" /> </td>
+            </tr>
+        </table>
+        <table ng-show="films" class="data">
+            <tr>
+                <th>Index</th><th>Movie ID</th><th>Title</th><th>Description</th><th>release_year</th>
+            </tr>
+            <tr data-ng-repeat="f in films | filter: { title : searchTitle }">
+                <td> {{ $index }} </td>
+                <td>{{f.film_id}}</td>
+                <td>{{f.title}}</td>
+                <td>{{f.description}}</td>
+                <td>{{f.release_year}}</td>
+
+
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

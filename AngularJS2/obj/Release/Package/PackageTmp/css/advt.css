@@ -1,0 +1,21 @@
+﻿body {
+}
+
+
+h1.advt1 {
+    background: blue;
+    border: 2px solid black;
+}
+
+h1.advt2 {
+    background: blueviolet;
+    border: 2px solid black;
+}
+
+div.container {
+    
+    background: linear-gradient(orange, black);
+    border: 3px dotted red;
+    border-radius: 50%;
+    opacity:0.75;
+}

@@ -1,0 +1,63 @@
+﻿.container {
+    position: absolute;
+    top:250px;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+    .container .cell {
+        font-size: 100px;
+        text-align: center;
+        line-height: 100px;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 2px solid black;
+    }
+
+.swap-animation.ng-enter, .swap-animation.ng-leave {
+    transition: background-color 0.5s ease;
+}
+
+ 
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.blue {
+    background: blue;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.orange {
+    background: orange;
+}
+
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+    transition: 10s linear all;
+    opacity: 0.1;
+    color: yellow;
+}
+
+    /* The finishing CSS styles for the enter animation */
+    .fade.ng-enter.ng-enter-active {
+        opacity: 1;
+        color:blue;
+    }
+
+    /* The finishing CSS styles for the enter animation */
+    .fade.ng-leave {
+        opacity: 1;
+        color: orange;
+    }
